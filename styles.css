@@ -6,10 +6,13 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  max-width: 1024px;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  /*align-items: flex-start;*/
   padding: 10px;
+  margin: auto;
+  gap: 10px;
 }
 
 h1 {
@@ -21,7 +24,8 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  width: 40%;
+  /*border: 1px solid green;*/
 }
 
 .form-input {
@@ -35,11 +39,15 @@ input {
   padding: 5px;
   border: 1px solid #a6a6a6;
   margin-bottom: 5px;
-  width: 30rem;
 }
 
 input:focus {
   outline-color: #6cc3f9;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 select {
@@ -52,7 +60,9 @@ select:focus {
 }
 
 button {
+  display: block;
   background-color: #16a2b8;
+  padding: 5px 0;
   border: none;
   color: white;
 }
@@ -60,4 +70,90 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #107989;
+}
+
+/*books section*/
+
+.books-section {
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid red;*/
+  width: 60%;
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+.books-section::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  background-color: #f2f2f2;
+  margin: 0 0 15px 0;
+}
+
+.title {
+  margin-right: 50px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title:hover:after {
+  content: attr(data-title);
+}
+
+.book-content {
+  max-width: 65%;
+  padding: 0 0 0 10px;
+  color: #404040;
+}
+
+.image-card {
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
+  width: 40%;
+}
+
+img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.exit {
+  position: absolute;
+  right: 0;
+  padding: 0 10px 0 0;
+  color: #ee232b;
+  font-weight: bold;
+}
+
+.exit:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+
+  form {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .books-section {
+    width: auto;
+  }
 }
