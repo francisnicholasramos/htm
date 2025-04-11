@@ -59,7 +59,7 @@ select:focus {
   outline: none;
 }
 
-button {
+.submit {
   display: block;
   background-color: #16a2b8;
   padding: 5px 0;
@@ -67,7 +67,7 @@ button {
   color: white;
 }
 
-button:hover {
+.submit:hover {
   cursor: pointer;
   background-color: #107989;
 }
@@ -115,10 +115,10 @@ button:hover {
 .image-card {
   box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
   width: 40%;
+  /* height: 350px; */
 }
 
 img {
-  display: block;
   margin: 0;
   width: 100%;
   height: auto;
@@ -127,9 +127,12 @@ img {
 .exit {
   position: absolute;
   right: 0;
-  padding: 0 10px 0 0;
+  margin: 0 10px 0 0;
   color: #ee232b;
   font-weight: bold;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
 }
 
 .exit:hover {
