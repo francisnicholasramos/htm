@@ -17,7 +17,6 @@ body {
   padding: 10px;
   margin: auto;
   gap: 10px;
-  /*border: 1px solid;*/
   background-color: #fff;
 }
 
@@ -31,7 +30,6 @@ form {
   display: flex;
   flex-direction: column;
   width: 40%;
-  /*border: 1px solid green;*/
 }
 
 .form-input {
@@ -94,7 +92,7 @@ select:focus {
 }
 
 .card {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   display: flex;
   position: relative;
   max-width: 100%;
@@ -127,12 +125,23 @@ img {
   height: auto;
 }
 
+.toggle {
+  font-size: 1rem;
+  color: #404040;
+  padding: 0 5px 0 5px;
+  margin: 5px 0 0 0;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
 .exit {
   position: absolute;
   right: 0;
   margin: 2px 10px 0 0;
   color: #ee232b;
-  font-weight: 900;
+  font-weight: 100;
   background-color: transparent;
   border: none;
   font-size: 1rem;
